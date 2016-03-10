@@ -1,0 +1,14 @@
+Application.
+
+[*] Read Level set methods paper again.
+[] Initialize a Voxel grid in code
+[] How do I define a working area?
+[] Define a sphere using implicit equation, define a center.
+[] How to store Voxel values (distance field values) for every point in and ouside the sphere?
+
+[] Use level set method to track a deformation [THIS COMES LATER]
+[] Use a space division scheme - octrees.
+[] Marching Cubes to render the sphere.
+
+Theory
+[] How do transition regions work? - Read level set paper - detailed one.
