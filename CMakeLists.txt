@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.3)
 project(VolumeSculptor)
 
+SET(VTK_DIR "/home/naman/Documents/VTK-7.0.0/" CACHE PATH "VTK directory override" FORCE)
+
 find_package( VTK REQUIRED )
 include(${VTK_USE_FILE})
 
@@ -32,7 +34,7 @@ include(${VTK_USE_FILE})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES trial.cpp)
+set(SOURCE_FILES trial.cpp octree.cpp)
 add_executable(VolumeSculptor ${SOURCE_FILES})
 
 

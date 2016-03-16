@@ -1,3 +1,4 @@
+/*
 //
 // Created by naman on 3/9/16.
 //
@@ -24,7 +25,7 @@ int main (int, char *[])
     // Sample the function
     vtkSmartPointer<vtkSampleFunction> sample =
             vtkSmartPointer<vtkSampleFunction>::New();
-    sample->SetSampleDimensions(1024,1024,1024);
+    sample->SetSampleDimensions(10,10,10);
     sample->SetImplicitFunction(sphere);
 
     double value = 2.0;
@@ -68,3 +69,4 @@ int main (int, char *[])
 
     return EXIT_SUCCESS;
 }
+*/
