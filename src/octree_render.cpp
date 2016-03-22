@@ -1,7 +1,7 @@
 //
 // Created by gautam on 22/3/16.
 //
-
+/*
 #include <vtkSmartPointer.h>
 
 #include <vtkSampleFunction.h>
@@ -46,20 +46,7 @@ int main (int, char *[])
     source3d->Update();
 
     hds->SetBlock(0, source3d->GetOutput());
-//    vtkSmartPointer<vtkSphere> sphere =
-//            vtkSmartPointer<vtkSphere>::New();
-//
-//    // Sample the function
-//    vtkSmartPointer<vtkSampleFunction> sample =
-//            vtkSmartPointer<vtkSampleFunction>::New();
-//    sample->SetSampleDimensions(10,10,10);
-//    sample->SetImplicitFunction(sphere);
-//
-//    double value = 2.0;
-//    double xmin = -value, xmax = value,
-//            ymin = -value, ymax = value,
-//            zmin = -value, zmax = value;
-//    sample->SetModelBounds(xmin, xmax, ymin, ymax, zmin, zmax);
+
 
     // Create the 0 isosurface
     vtkSmartPointer<vtkContourFilter> contours =
@@ -96,5 +83,4 @@ int main (int, char *[])
 
     return EXIT_SUCCESS;
 }
-
-
+*/
