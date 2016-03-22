@@ -1,7 +1,3 @@
-/*
-//
-// Created by naman on 3/9/16.
-//
 #include <vtkSmartPointer.h>
 
 #include <vtkSampleFunction.h>
@@ -17,15 +13,14 @@
 
 #include <vtkSphere.h>
 
-int main (int, char *[])
-{
+int implicit_sphere() {
     vtkSmartPointer<vtkSphere> sphere =
             vtkSmartPointer<vtkSphere>::New();
 
     // Sample the function
     vtkSmartPointer<vtkSampleFunction> sample =
             vtkSmartPointer<vtkSampleFunction>::New();
-    sample->SetSampleDimensions(10,10,10);
+    sample->SetSampleDimensions(10, 10, 10);
     sample->SetImplicitFunction(sphere);
 
     double value = 2.0;
@@ -69,4 +64,4 @@ int main (int, char *[])
 
     return EXIT_SUCCESS;
 }
-*/
+

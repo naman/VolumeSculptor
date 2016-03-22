@@ -1,7 +1,3 @@
-//
-// Created by gautam on 22/3/16.
-//
-/*
 #include <vtkSmartPointer.h>
 
 #include <vtkSampleFunction.h>
@@ -16,8 +12,7 @@
 #include <vtkSphere.h>
 #include <vtkHyperOctreeSampleFunction.h>
 
-int main (int, char *[])
-{
+int octree_render() {
     // 3D
     vtkHyperOctreeSampleFunction *source3d = vtkHyperOctreeSampleFunction::New();
     vtkSphere *f3d = vtkSphere::New();
@@ -76,4 +71,3 @@ int main (int, char *[])
 
     return EXIT_SUCCESS;
 }
-*/

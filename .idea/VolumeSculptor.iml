@@ -2,12 +2,14 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/octree_3D.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/implicit_sphere.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/octree_marchingcubes.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/marchingsample.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/octree_2.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/octree_render.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/octree_3D.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/octree_2.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/marching_sample.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/implicit_sphere.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ImplicitPolyDataDistance.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/octree_render.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/SDT_Octree.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
