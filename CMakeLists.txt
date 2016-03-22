@@ -7,7 +7,7 @@ find_package( VTK REQUIRED )
 include(${VTK_USE_FILE})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-set(SOURCE_FILES src/implicit_sphere.cpp src/octree_3D.cpp src/octree_marchingcubes.cpp src/marchingsample.cpp src/octree_render.cpp)
+set(SOURCE_FILES src/implicit_sphere.cpp src/octree_3D.cpp src/octree_marchingcubes.cpp src/marchingsample.cpp src/octree_render.cpp src/octree_2.cpp)
 
 add_executable(VolumeSculptor ${SOURCE_FILES})
 
