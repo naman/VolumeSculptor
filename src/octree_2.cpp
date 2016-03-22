@@ -8,8 +8,8 @@
 
 #include "vtkActor.h"
 #include "vtkCellData.h"
-#include "vtkTestUtilities.h"
-#include "vtkRegressionTestImage.h"
+//#include "vtkTestUtilities.h"
+//#include "vtkRegressionTestImage.h"
 #include "vtkRenderer.h"
 #include "vtkRenderWindow.h"
 #include "vtkRenderWindowInteractor.h"
@@ -29,10 +29,7 @@
 #include "vtkCompositePolyDataMapper.h"
 #include "vtkHyperOctreeSurfaceFilter.h"
 
-#include "vtkFieldData.h"
 #include "vtkCharArray.h"
-#include "vtkDataObject.h"
-# include <unistd.h>
 
 
 int main(int argc, char* argv[])
@@ -201,7 +198,7 @@ int main(int argc, char* argv[])
   // Make sure we call SetExecutive right after the filter creation and
   // before the SetInput call.
   surface->SetExecutive(exec);
-  surface->SetInput(hds);
+  surface->SetInputData(hds);
   exec->Delete();
   hds->Delete();
 
