@@ -1,7 +1,7 @@
 //
 // Created by gautam on 22/3/16.
 //
-
+/*
 #include <vtkSmartPointer.h>
 
 #include <vtkSampleFunction.h>
@@ -76,3 +76,4 @@ int main (int, char *[])
 
     return EXIT_SUCCESS;
 }
+*/
