@@ -6,25 +6,18 @@
 
 #include <vtkSampleFunction.h>
 #include <vtkContourFilter.h>
-#include <vtkOutlineFilter.h>
 #include <vtkPolyDataMapper.h>
 #include <vtkActor.h>
 #include <vtkProperty.h>
 #include <vtkRenderWindow.h>
 #include <vtkRenderer.h>
 #include <vtkRenderWindowInteractor.h>
-#include <vtkImageData.h>
 
 #include <vtkSphere.h>
 #include <vtkHyperOctreeSampleFunction.h>
-#include <vtkMultiBlockDataSet.h>
 
 int main (int, char *[])
 {
-
-    vtkMultiBlockDataSet *hds = vtkMultiBlockDataSet::New();
-    hds->SetNumberOfBlocks(1);
-
     // 3D
     vtkHyperOctreeSampleFunction *source3d = vtkHyperOctreeSampleFunction::New();
     vtkSphere *f3d = vtkSphere::New();
@@ -39,27 +32,14 @@ int main (int, char *[])
     source3d->SetWidth(10);
     source3d->SetHeight(10);
     source3d->SetDepth(10);
-    source3d->SetLevels(7); // 10
+
+    cout << source3d->GetLevels() << endl; // returns 5 then how is the next line working?!
+
+    source3d->SetLevels(8); // Change it back to 7.
     source3d->SetMinLevels(0);
-    source3d->SetOrigin(-2, -2, -2);
+    source3d->SetOrigin(-2, -2, -2); //Origin vs Center?
 
     source3d->Update();
-
-    hds->SetBlock(0, source3d->GetOutput());
-//    vtkSmartPointer<vtkSphere> sphere =
-//            vtkSmartPointer<vtkSphere>::New();
-//
-//    // Sample the function
-//    vtkSmartPointer<vtkSampleFunction> sample =
-//            vtkSmartPointer<vtkSampleFunction>::New();
-//    sample->SetSampleDimensions(10,10,10);
-//    sample->SetImplicitFunction(sphere);
-//
-//    double value = 2.0;
-//    double xmin = -value, xmax = value,
-//            ymin = -value, ymax = value,
-//            zmin = -value, zmax = value;
-//    sample->SetModelBounds(xmin, xmax, ymin, ymax, zmin, zmax);
 
     // Create the 0 isosurface
     vtkSmartPointer<vtkContourFilter> contours =
@@ -96,5 +76,3 @@ int main (int, char *[])
 
     return EXIT_SUCCESS;
 }
-
-

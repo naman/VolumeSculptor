@@ -3,7 +3,7 @@ project(VolumeSculptor)
 
 SET(VTK_DIR "/home/naman/Documents/VTK-7.0.0/" CACHE PATH "VTK directory override" FORCE)
 
-find_package( VTK REQUIRED )
+find_package(VTK REQUIRED)
 include(${VTK_USE_FILE})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
@@ -16,3 +16,4 @@ if(VTK_LIBRARIES)
 else()
     target_link_libraries(VolumeSculptor vtkHybrid vtkWidgets)
 endif()
+
