@@ -7,7 +7,7 @@
 //
 //
 
-
+/*
 #include "vtkActor.h"
 #include "vtkCellData.h"
 
@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 	// Make sure we call SetExecutive right after the filter creation and
 	// before the SetInput call.
 	surface->SetExecutive(exec);
-	surface->SetInputData(hds);
+	surface->SetInput(hds);
 	hds->Delete();
 	exec->Delete();
 
@@ -112,3 +112,4 @@ int main(int argc, char *argv[]) {
 
 	return 0;
 }
+*/
