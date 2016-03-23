@@ -1,9 +1,3 @@
-/*
- * This example creates, saves to disk, reloads from disk, and then draws
- * a vtkHyperOctree. The purpose is to check that disk IO of HyperOctrees
- * works.
-*/
-
 #include "vtkActor.h"
 #include "vtkCellData.h"
 #include "vtkRenderer.h"
@@ -29,6 +23,14 @@
 
 
 int octree_2() {
+
+    /*
+    * This example creates, saves to disk, reloads from disk, and then draws
+    * a vtkHyperOctree. The purpose is to check that disk IO of HyperOctrees
+    * works.
+    */
+
+
     int dimension = 3;
     int levels = 5;
     int skipreader = 0;

@@ -1,9 +1,3 @@
-/*
- * This code is for visualizing an octree storing a 3d implicit sphere.
- * Multiblockdataset has been used for storing multiple data sets for visualization.
- * Colored mapping is done as a fancy way to visualize the octree dataset
- */
-
 #include "vtkActor.h"
 #include "vtkCellData.h"
 
@@ -23,6 +17,13 @@
 #include "vtkCompositePolyDataMapper.h"
 
 int octree_3D() {
+
+    /*
+        * This code is for visualizing an octree storing a 3d implicit sphere.
+        * Multiblockdataset has been used for storing multiple data sets for visualization.
+        * Colored mapping is done as a fancy way to visualize the octree dataset
+     */
+
     // Standard rendering classes
     vtkRenderer *renderer = vtkRenderer::New();
     vtkRenderWindow *renWin = vtkRenderWindow::New();

@@ -14,6 +14,14 @@
 #include <vtkSphere.h>
 
 int implicit_sphere() {
+
+    /*
+     * Samples an implicit sphere in a Voxel Grid
+     * 0 level isosurface using contour filter
+     * Applies a color mapping to each contour
+     * Visualize
+     * */
+
     vtkSmartPointer<vtkSphere> sphere =
             vtkSmartPointer<vtkSphere>::New();
 
