@@ -111,8 +111,44 @@ int main()
 {
     // Initialize the OpenVDB library.  This must be called at least
     // once per program and may safely be called multiple times.
-    openvdb::initialize();
+    initialize();
     // Create an empty floating-point grid with background value 0.
     createAndWriteGrid();
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
