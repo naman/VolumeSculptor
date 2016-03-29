@@ -16,7 +16,7 @@ set(SOURCE_FILES
         src/main.cpp
         src/SDT_contour.h
         src/SDT_Octree.h
-        openVDB/levelset.cpp)
+        )
 
 add_executable(VolumeSculptor ${SOURCE_FILES})
 

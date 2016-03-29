@@ -10,7 +10,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/ImplicitPolyDataDistance.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/octree_render.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/SDT_Octree.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/openVDB/levelset.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
