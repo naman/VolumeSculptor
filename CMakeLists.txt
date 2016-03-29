@@ -7,7 +7,16 @@ find_package(VTK REQUIRED)
 include(${VTK_USE_FILE})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-set(SOURCE_FILES src/implicit_sphere.cpp src/octree_3D.cpp src/octree_marchingcubes.cpp src/marchingsample.cpp src/octree_render.cpp src/octree_2.cpp src/vbd_level_set.cpp openVDB/levelset.cpp)
+set(SOURCE_FILES
+        src/implicit_sphere.h
+        src/ImplicitPolyDataDistance.h
+        src/marching_sample.h
+        src/octree_render.h
+        src/octree_2.h
+        src/main.cpp
+        src/SDT_contour.h
+        src/SDT_Octree.h
+        openVDB/levelset.cpp)
 
 add_executable(VolumeSculptor ${SOURCE_FILES})
 

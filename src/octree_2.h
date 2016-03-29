@@ -29,6 +29,11 @@ int octree_2() {
     * a vtkHyperOctree. The purpose is to check that disk IO of HyperOctrees
     * works.
     */
+    /*
+        * This code is for visualizing an octree storing a 3d implicit sphere.
+        * Multiblockdataset has been used for storing multiple data sets for visualization.
+        * Colored mapping is done as a fancy way to visualize the octree dataset
+     */
 
 
     int dimension = 3;
@@ -37,8 +42,8 @@ int octree_2() {
     int binary = 2;
     int compressed = 1;
     int showcontour = 1;
-    int ncontours = 1;
-    int rewrite = 1;
+    int ncontours = 3;
+    int rewrite = 0;
     int interactive = 1;
 
 

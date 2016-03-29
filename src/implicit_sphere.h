@@ -1,3 +1,13 @@
+
+
+///////////////////////////////////////////////////////////////////////////
+//
+/// @file implicit_sphere.h
+///
+/// @brief Taking a vtksphere, Sampling it. Sampling is being done by calculating the implicit function value and the gradient of every point in and around the sphere. Then the sampled values are stored in a Volume grid. Then we calculate 0 contour of the function. Contouring finds contour for a specified value , or it can generate contour for a given range of values.
+///
+
+
 #include <vtkSmartPointer.h>
 
 #include <vtkSampleFunction.h>
@@ -12,23 +22,20 @@
 #include <vtkImageData.h>
 
 #include <vtkSphere.h>
+#include <vtkMarchingContourFilter.h>
 
 int implicit_sphere() {
 
-    /*
-     * Samples an implicit sphere in a Voxel Grid
-     * 0 level isosurface using contour filter
-     * Applies a color mapping to each contour
-     * Visualize
-     * */
-
     vtkSmartPointer<vtkSphere> sphere =
             vtkSmartPointer<vtkSphere>::New();
+//    sphere->SetCenter(-2,-2, -2);
+//    sphere->SetCenter(-2,-2, -2);
 
     // Sample the function
     vtkSmartPointer<vtkSampleFunction> sample =
             vtkSmartPointer<vtkSampleFunction>::New();
-    sample->SetSampleDimensions(10, 10, 10);
+    sample->SetSampleDimensions(50, 50, 50);
+
     sample->SetImplicitFunction(sphere);
 
     double value = 2.0;
@@ -38,10 +45,11 @@ int implicit_sphere() {
     sample->SetModelBounds(xmin, xmax, ymin, ymax, zmin, zmax);
 
     // Create the 0 isosurface
-    vtkSmartPointer<vtkContourFilter> contours =
-            vtkSmartPointer<vtkContourFilter>::New();
+    vtkSmartPointer<vtkMarchingContourFilter> contours =
+            vtkSmartPointer<vtkMarchingContourFilter>::New();
     contours->SetInputConnection(sample->GetOutputPort());
-    contours->GenerateValues(1, 1, 1);
+//    contours->GenerateValues(10, 0, 10);
+    contours->GenerateValues(1, 0, 0);
 
     // Map the contours to graphical primitives
     vtkSmartPointer<vtkPolyDataMapper> contourMapper =

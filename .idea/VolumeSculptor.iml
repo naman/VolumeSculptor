@@ -2,29 +2,257 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/implicit_sphere.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/vbd_level_set.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/octree_marchingcubes.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/marchingsample.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/octree_2.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/octree_3D.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/octree_render.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/SDT_contour.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/octree_2.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/marching_sample.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/implicit_sphere.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ImplicitPolyDataDistance.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/octree_render.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/SDT_Octree.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/openVDB/levelset.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
-          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
-          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
           <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
           <root url="file:///usr/local/include" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Charts/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/AMR" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/FlowPaths" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/ParallelImaging" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Parallel" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Geometry" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Sources" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Selection" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Generic" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/SMP" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/HyperTree" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Extraction" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Hybrid" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Verdict" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Modeling" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Texture" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Imaging" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/General" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Statistics" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Programmable" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Transforms" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/DataModel" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Math" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/ExecutionModel" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/System" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Misc" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Color" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/ComputationalGeometry" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Annotation" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Image" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/ContextOpenGL2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/VolumeOpenGL2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Context2D" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Qt" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Label" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/OpenGL2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/FreeType" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/LOD" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Volume" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Examples/Build/vtkLocal" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Parallel/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/EncodeString" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/HashSource" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/KWSys" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/MetaIO" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/DICOMParser" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/netcdf" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/png" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/jpeg" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/jsoncpp" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/verdict" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/libxml2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/glew" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/expat" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/zlib" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/libproj4" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/sqlite" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/oggtheora" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/freetype" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/tiff" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/exodusII" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/hdf5" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/alglib" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Views/Context2D" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Views/Infovis" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Views/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Views/Qt" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Infovis/Layout" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Infovis/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Interaction/Image" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Interaction/Widgets" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Interaction/Style" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Hybrid" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Sources" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Morphological" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Math" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Statistics" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Stencil" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Color" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Fourier" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/General" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/AMR" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/PLY" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Export" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Parallel" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Geometry" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/SQL" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/LSDyna" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Movie" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/MINC" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Exodus" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Legacy" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Infovis" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/ParallelXML" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/NetCDF" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Import" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Video" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/EnSight" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/XML" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/XMLParser" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Image" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Geovis/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/GUISupport/Qt" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/GUISupport/QtSQL" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Domains/ChemistryOpenGL2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Domains/Chemistry" />
+          <root url="file://$USER_HOME$/Qt5.6.0/5.6/gcc_64/include" />
+          <root url="file://$USER_HOME$/Qt5.6.0/5.6/gcc_64/mkspecs/linux-g++" />
         </CLASSES>
         <SOURCES>
-          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
-          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
           <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
           <root url="file:///usr/local/include" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Charts/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/AMR" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/FlowPaths" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/ParallelImaging" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Parallel" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Geometry" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Sources" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Selection" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Generic" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/SMP" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/HyperTree" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Extraction" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Hybrid" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Verdict" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Modeling" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Texture" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Imaging" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/General" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Statistics" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Programmable" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Filters/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Transforms" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/DataModel" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Math" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/ExecutionModel" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/System" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Misc" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Color" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Common/ComputationalGeometry" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Annotation" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Image" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/ContextOpenGL2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/VolumeOpenGL2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Context2D" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Qt" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Label" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/OpenGL2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/FreeType" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/LOD" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Rendering/Volume" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Examples/Build/vtkLocal" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Parallel/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/EncodeString" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/HashSource" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/KWSys" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/MetaIO" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Utilities/DICOMParser" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/netcdf" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/png" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/jpeg" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/jsoncpp" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/verdict" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/libxml2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/glew" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/expat" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/zlib" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/libproj4" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/sqlite" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/oggtheora" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/freetype" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/tiff" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/exodusII" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/hdf5" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/ThirdParty/alglib" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Views/Context2D" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Views/Infovis" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Views/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Views/Qt" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Infovis/Layout" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Infovis/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Interaction/Image" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Interaction/Widgets" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Interaction/Style" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Hybrid" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Sources" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Morphological" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Math" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Statistics" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Stencil" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Color" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/Fourier" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Imaging/General" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/AMR" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/PLY" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Export" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Parallel" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Geometry" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/SQL" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/LSDyna" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Movie" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/MINC" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Exodus" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Legacy" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Infovis" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/ParallelXML" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/NetCDF" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Import" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Video" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/EnSight" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/XML" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/XMLParser" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/IO/Image" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Geovis/Core" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/GUISupport/Qt" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/GUISupport/QtSQL" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Domains/ChemistryOpenGL2" />
+          <root url="file://$USER_HOME$/Documents/VTK-7.0.0/Domains/Chemistry" />
+          <root url="file://$USER_HOME$/Qt5.6.0/5.6/gcc_64/include" />
+          <root url="file://$USER_HOME$/Qt5.6.0/5.6/gcc_64/mkspecs/linux-g++" />
         </SOURCES>
       </library>
     </orderEntry>
