@@ -5,11 +5,14 @@
 #include <openvdb/math/Vec3.h>
 #include <openvdb/openvdb.h>
 #include <openvdb/tools/LevelSetSphere.h>
+#include </home/gautam/Documents/openvdb/tools/LevelSetRebuild.h>
 #include <openvdb/tree/TreeIterator.h>
 #include <openvdb/Types.h>
+#include <iostream>
 #include <vector>
 
 using namespace openvdb;
+using namespace std;
 
 void createAndWriteGrid() {
 	float backgroundValue = 2.0;
@@ -19,7 +22,7 @@ void createAndWriteGrid() {
 
 	grid = tools::createLevelSetSphere<FloatGrid>(
 	/*radius=*/100.0, /*center=*/Vec3f(1.5, 2, 3),
-	/*voxel size=*/1.5, /*width=*/2.0);
+	/*voxel size=*/1.5, /*width=*/5.0);
 
 	grid->setName("LevelSetSphere");
 
@@ -35,7 +38,6 @@ void createAndWriteGrid() {
 void modifyGrid() {
 	io::File file("grids.vdb");
 	file.open();
-
 	GridBase::Ptr baseGrid;
 	baseGrid = file.readGrid("LevelSetSphere");
 
@@ -56,20 +58,60 @@ void modifyGrid() {
 	// voxels on the narrow band.
 	// This can be used over the timestep to update the active voxels in narrow
 	// band and apply force according to the equation.
+	math::Coord coord;
+	coord.setX(41);
+	coord.setY(56);
+	coord.setZ(8);
+
+	math::Coord coord1;
+	coord1.setX(91);
+	coord1.setY(116);
+	coord1.setZ(58);
+
+	math::Coord coord_;/*
+	 vector<Coord> coords;
+	 vector<float> values;*/
+
+	float k = -5;
+
 	for (FloatGrid::ValueOnIter iter = grid->beginValueOn(); iter; ++iter) {
 		float dist = iter.getValue();
-		iter.setValue((outside - dist) / width); //((2-dist)/4
+		coord_ = iter.getCoord();
+		if (coord_ > coord && coord_ < coord1) {
+//			coords.push_back(coord_);
+			cout << dist << endl;
+//			values.push_back(dist);
+			iter.setValue(dist - k);
+			//((2-dist)/4
+			//			cout << coord_.x() <<" " << coord_.y() <<" "<< coord_.z() << endl;
+		}
 	}
+	//grid = tools::levelSetRebuild(grid->constTreePtr() , 0.0, 5.0, NULL);
+	/*
+	 vector<vector<float>> store(coords.size() * 100);
+
+	 for (var = 0; var < coords.size(); ++var) {
+	 store[var][0] = values[var];
+
+	 }
+
+
+	 for (var = 0; var < coords.size(); ++var) {
+	 for (t = 0; t < 100; ++t) {
+	 store[var][t] = store[var][t - 1] - k;
+	 }
+	 }
+	 */
 
 	// Visit all of the grid's inactive tile and voxel values and update the values
 	// that correspond to the interior region.
 	for (FloatGrid::ValueOffIter iter = grid->beginValueOff(); iter; ++iter) {
 		if (iter.getValue() < 0.0) {
-			iter.setValue(1.0);
+			iter.setValue(-1 * width);
 			iter.setValueOff();
 		}
 		if (iter.getValue() > 0.0) {
-			iter.setValue(0.0);
+			iter.setValue(width);
 			iter.setValueOff();
 		}
 	}

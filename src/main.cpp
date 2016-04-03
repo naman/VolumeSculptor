@@ -49,14 +49,12 @@
 #include <string>
 #include <vector>
 
-#include "../../../../Documents/openvdb/viewer/Viewer.h"
+#include "../../../Documents/openvdb/viewer/Viewer.h"
 
 #ifdef DWA_OPENVDB
 #include <logging_base/logging.h>
 #include <usagetrack.h>
 #endif
-
-using namespace openvdb_viewer;
 
 void
 usage(const char* progName, int status)
@@ -102,6 +100,7 @@ usage(const char* progName, int status)
 int
 main(int argc, char *argv[])
 {
+
 #ifdef DWA_OPENVDB
     USAGETRACK_report_basic_tool_usage(argc, argv, /*duration=*/0);
     logging_base::configure(argc, argv);
