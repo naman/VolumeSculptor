@@ -4,11 +4,11 @@
 #include <openvdb/math/Coord.h>
 #include <openvdb/math/Vec3.h>
 #include <openvdb/openvdb.h>
+#include <openvdb/tools/LevelSetRebuild.h>
 #include <openvdb/tools/LevelSetSphere.h>
-#include </home/gautam/Documents/openvdb/tools/LevelSetRebuild.h>
 #include <openvdb/tree/TreeIterator.h>
 #include <openvdb/Types.h>
-#include <iostream>
+#include <stddef.h>
 #include <vector>
 
 using namespace openvdb;
@@ -52,7 +52,7 @@ void modifyGrid() {
 	// narrow-band voxels have values varying linearly from 0 to 1.
 
 	float outside = grid->background(); //2
-	float width = 2.0 * outside;       //4. Why are we doing this?
+	float width = 2.0 * outside;       //4. width of narrow band
 
 	// Visit and update all of the grid's active values, which correspond to
 	// voxels on the narrow band.
@@ -64,44 +64,29 @@ void modifyGrid() {
 	coord.setZ(8);
 
 	math::Coord coord1;
-	coord1.setX(91);
-	coord1.setY(116);
-	coord1.setZ(58);
+	coord1.setX(51);
+	coord1.setY(66);
+	coord1.setZ(18);
 
-	math::Coord coord_;/*
-	 vector<Coord> coords;
-	 vector<float> values;*/
+	math::Coord coord_;
 
-	float k = -5;
+
+	float k = -45;
 
 	for (FloatGrid::ValueOnIter iter = grid->beginValueOn(); iter; ++iter) {
 		float dist = iter.getValue();
 		coord_ = iter.getCoord();
 		if (coord_ > coord && coord_ < coord1) {
 //			coords.push_back(coord_);
-			cout << dist << endl;
+//			cout << dist << endl;
 //			values.push_back(dist);
 			iter.setValue(dist - k);
 			//((2-dist)/4
 			//			cout << coord_.x() <<" " << coord_.y() <<" "<< coord_.z() << endl;
 		}
 	}
-	//grid = tools::levelSetRebuild(grid->constTreePtr() , 0.0, 5.0, NULL);
-	/*
-	 vector<vector<float>> store(coords.size() * 100);
 
-	 for (var = 0; var < coords.size(); ++var) {
-	 store[var][0] = values[var];
-
-	 }
-
-
-	 for (var = 0; var < coords.size(); ++var) {
-	 for (t = 0; t < 100; ++t) {
-	 store[var][t] = store[var][t - 1] - k;
-	 }
-	 }
-	 */
+//	tools::levelSetRebuild(*grid, 0.0, 0.5); //Is not doing anything :/
 
 	// Visit all of the grid's inactive tile and voxel values and update the values
 	// that correspond to the interior region.
