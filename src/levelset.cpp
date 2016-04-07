@@ -9,7 +9,7 @@
 #include <openvdb/Types.h>
 #include <vector>
 
-#include "../../../../Documents/openvdb/viewer/Viewer.h"
+#include "/usr/local/openvdb/viewer/Viewer.h"
 
 using namespace openvdb;
 using namespace std;
@@ -24,7 +24,7 @@ float constantForce() {
 float gaussianForce() {
 	/// For bumps, inside and outside ///
 	float sigma = 1;
-//	F = exp −||p−p 0 ||/2σ	2
+//	F = exp ���||p���p 0 ||/2��	2
 	float k = 1;
 	return k;
 }
@@ -37,7 +37,7 @@ void createAndWriteGrid() {
 
 	grid = tools::createLevelSetSphere<FloatGrid>(
 	/*radius=*/100.0, /*center=*/Vec3f(1.5, 2, 3),
-	/*voxel size=*/1.5, /*width=*/0.5); //METERS
+	/*voxel size=*/1.5, /*width=*/2	); //METERS
 
 	grid->setName("LevelSetSphere");
 
@@ -78,7 +78,7 @@ void modifyGrid() {
 	math::Coord coord_;
 
 	float F = constantForce();
-	float F = gaussianForce();
+	//float F = gaussianForce();
 
 	for (FloatGrid::ValueOnIter iter = grid->beginValueOn(); iter; ++iter) {
 		float dist = iter.getValue();
@@ -106,9 +106,11 @@ void modifyGrid() {
 	output_file.close();
 }
 
+void displayGrid() {}
+/*
 void displayGrid() {
-	openvdb_viewer::Viewer viewer = openvdb_viewer::init("Test", /*bg=*/
-	false);
+	//openvdb_viewer::Viewer viewer = openvdb_viewer::init("Test",
+	//false);
 
 	GridCPtrVec allGrids;
 
@@ -124,15 +126,16 @@ void displayGrid() {
 
 	openvdb_viewer::exit();
 }
+*/
 
 int main() {
 	// Initialize the OpenVDB library.  This must be called at least
 	// once per program and may safely be called multiple times.
 	initialize();
 	// Create an empty floating-point grid with background value 0.
-//	createAndWriteGrid();
+	createAndWriteGrid();
 
 //	modifyGrid();
-	displayGrid();
+//	displayGrid();
 }
 
